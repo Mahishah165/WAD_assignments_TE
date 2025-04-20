@@ -1,0 +1,21 @@
+[
+    {
+      "rollno": "101",
+      "name": "Alice Johnson",
+      "age": 21,
+      "department": "Computer Science"
+    },
+    {
+      "rollno": "102",
+      "name": "Bob Smith",
+      "age": 22,
+      "department": "Electrical Engineering"
+    },
+    {
+      "rollno": "103",
+      "name": "Charlie Brown",
+      "age": 23,
+      "department": "Mechanical Engineering"
+    }
+  ]
+   

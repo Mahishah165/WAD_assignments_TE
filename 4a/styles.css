@@ -1,0 +1,41 @@
+body { 
+    font-family: Arial, sans-serif; 
+    background: #f4f4f4; 
+    color: #333; 
+}
+.custom-header { 
+    background: #007bff; 
+    color: white; 
+    text-align: center; 
+    padding: 15px; 
+}
+.custom-footer { 
+    background: #343a40; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+}
+.ui-content { 
+    padding: 20px; 
+}
+.product-img { 
+    width: 100px; 
+    height: auto; 
+    margin-right: 15px; 
+    border-radius: 10px; 
+}
+.product-item { 
+    display: flex; 
+    align-items: center; 
+    padding: 15px; 
+    border-bottom: 1px solid #ddd; 
+    background: white; 
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+}
+.ui-btn { 
+    border-radius: 8px; 
+}

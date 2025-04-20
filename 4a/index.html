@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+    <style>
+        .center-text {
+            text-align: center;
+        }
+        .custom-icon {
+            text-align: center;
+            font-size: 48px;
+            margin: 10px 0;
+        }
+        .feature-box {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .ui-page {
+            background: #f8f8f8;
+        }
+        .ui-content {
+            padding: 15px;
+        }
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 150px;
+            font-size: 36px;
+            color: white;
+        }
+        .product-img {
+            width: 100%;
+            height: 120px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Page -->
+    <div data-role="page" id="home">
+        <div data-role="header" data-position="fixed">
+            <h1>Mobile App</h1>
+            <a href="#panel-menu" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-notext">Menu</a>
+        </div>
+
+        <div data-role="panel" id="panel-menu" data-display="overlay">
+            <ul data-role="listview">
+                <li data-icon="home"><a href="#home">Home</a></li>
+                <li data-icon="user"><a href="#profile">Profile</a></li>
+                <li data-icon="shop"><a href="#products">Products</a></li>
+                <li data-icon="mail"><a href="#contact">Contact</a></li>
+                <li data-icon="info"><a href="#about">About</a></li>
+            </ul>
+            <a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close</a>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div class="center-text">
+                <h2>Welcome to Our Mobile App</h2>
+                <p>A simple and responsive mobile website built with jQuery Mobile.</p>
+            </div>
+
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="#profile" class="ui-btn ui-corner-all ui-shadow">
+                        <div class="custom-icon">👤</div>
+                        Profile
+                    </a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#products" class="ui-btn ui-corner-all ui-shadow">
+                        <div class="custom-icon">🛒</div>
+                        Products
+                    </a>
+                </div>
+                <div class="ui-block-a">
+                    <a href="#contact" class="ui-btn ui-corner-all ui-shadow">
+                        <div class="custom-icon">✉️</div>
+                        Contact
+                    </a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#about" class="ui-btn ui-corner-all ui-shadow">
+                        <div class="custom-icon">ℹ️</div>
+                        About
+                    </a>
+                </div>
+            </div>
+
+            <div data-role="collapsible-set" data-theme="a" data-content-theme="a">
+                <div data-role="collapsible">
+                    <h3>Featured Services</h3>
+                    <div class="feature-box">
+                        <h4>Mobile Development</h4>
+                        <p>Building responsive mobile applications and websites.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h4>Web Development</h4>
+                        <p>Creating dynamic websites and web applications.</p>
+                    </div>
+                </div>
+                <div data-role="collapsible">
+                    <h3>News & Updates</h3>
+                    <ul data-role="listview">
+                        <li>
+                            <h3>New Mobile App Released</h3>
+                            <p>We've just launched our new mobile application! Download it now.</p>
+                            <p class="ui-li-aside"><strong>Apr 2, 2025</strong></p>
+                        </li>
+                        <li>
+                            <h3>Website Redesign</h3>
+                            <p>Our website has been completely redesigned for better user experience.</p>
+                            <p class="ui-li-aside"><strong>Mar 28, 2025</strong></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+                    <li><a href="#profile" data-icon="user">Profile</a></li>
+                    <li><a href="#contact" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Page -->
+    <div data-role="page" id="profile">
+        <div data-role="header" data-position="fixed">
+            <a href="#home" data-icon="home" class="ui-btn-left">Home</a>
+            <h1>Profile</h1>
+            <a href="#panel-menu" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext">Menu</a>
+        </div>
+
+        <div data-role="panel" id="panel-menu" data-display="overlay">
+            <ul data-role="listview">
+                <li data-icon="home"><a href="#home">Home</a></li>
+                <li data-icon="user"><a href="#profile">Profile</a></li>
+                <li data-icon="shop"><a href="#products">Products</a></li>
+                <li data-icon="mail"><a href="#contact">Contact</a></li>
+                <li data-icon="info"><a href="#about">About</a></li>
+            </ul>
+            <a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close</a>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div class="profile-img">👤</div>
+            <h2 class="center-text">John Doe</h2>
+            <p class="center-text">Mobile App Developer</p>
+
+            <ul data-role="listview" data-inset="true">
+                <li><div class="ui-grid-a"><div class="ui-block-a"><strong>Email:</strong></div><div class="ui-block-b">john.doe@example.com</div></div></li>
+                <li><div class="ui-grid-a"><div class="ui-block-a"><strong>Phone:</strong></div><div class="ui-block-b">(555) 123-4567</div></div></li>
+                <li><div class="ui-grid-a"><div class="ui-block-a"><strong>Location:</strong></div><div class="ui-block-b">San Francisco, CA</div></div></li>
+            </ul>
+
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Bio</h3>
+                <p>John is an experienced mobile developer with over 5 years of experience building cross-platform mobile applications and responsive websites.</p>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Skills</h3>
+                <div data-role="controlgroup">
+                    <a href="#" class="ui-btn ui-corner-all">HTML5</a>
+                    <a href="#" class="ui-btn ui-corner-all">CSS3</a>
+                    <a href="#" class="ui-btn ui-corner-all">JavaScript</a>
+                    <a href="#" class="ui-btn ui-corner-all">jQuery Mobile</a>
+                    <a href="#" class="ui-btn ui-corner-all">React Native</a>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">Home</a></li>
+                    <li><a href="#profile" data-icon="user" class="ui-btn-active">Profile</a></li>
+                    <li><a href="#contact" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Page -->
+    <div data-role="page" id="products">
+        <div data-role="header" data-position="fixed">
+            <a href="#home" data-icon="home" class="ui-btn-left">Home</a>
+            <h1>Products</h1>
+            <a href="#panel-menu" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext">Menu</a>
+        </div>
+
+        <div data-role="panel" id="panel-menu" data-display="overlay">
+            <ul data-role="listview">
+                <li data-icon="home"><a href="#home">Home</a></li>
+                <li data-icon="user"><a href="#profile">Profile</a></li>
+                <li data-icon="shop"><a href="#products">Products</a></li>
+                <li data-icon="mail"><a href="#contact">Contact</a></li>
+                <li data-icon="info"><a href="#about">About</a></li>
+            </ul>
+            <a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close</a>
+        </div>
+
+        <div role="main" class="ui-content">
+            <h2>Our Products</h2>
+            
+            <div data-role="controlgroup" data-type="horizontal" class="ui-mini">
+                <a href="#" class="ui-btn ui-btn-active">All</a>
+                <a href="#" class="ui-btn">Mobile</a>
+                <a href="#" class="ui-btn">Web</a>
+                <a href="#" class="ui-btn">Desktop</a>
+            </div>
+            
+            <ul data-role="listview" data-inset="true">
+                <li>
+                    <a href="#product-detail">
+                        <div class="product-img"><img src="img1.jpg"></div>
+                        <h2>Mobile App Template</h2>
+                        <p>A ready-to-use template for your next mobile application</p>
+                        <p class="ui-li-aside"><strong>$49</strong></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#product-detail">
+                        <div class="product-img">Product Image 2</div>
+                        <h2>Responsive Website Kit</h2>
+                        <p>Complete toolkit for building responsive websites</p>
+                        <p class="ui-li-aside"><strong>$59</strong></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#product-detail">
+                        <div class="product-img">Product Image 3</div>
+                        <h2>E-commerce Solution</h2>
+                        <p>Full e-commerce platform with mobile support</p>
+                        <p class="ui-li-aside"><strong>$129</strong></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#product-detail">
+                        <div class="product-img">Product Image 4</div>
+                        <h2>CMS Framework</h2>
+                        <p>Lightweight content management system</p>
+                        <p class="ui-li-aside"><strong>$79</strong></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">Home</a></li>
+                    <li><a href="#profile" data-icon="user">Profile</a></li>
+                    <li><a href="#contact" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div data-role="page" id="contact">
+        <div data-role="header" data-position="fixed">
+            <a href="#home" data-icon="home" class="ui-btn-left">Home</a>
+            <h1>Contact</h1>
+            <a href="#panel-menu" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext">Menu</a>
+        </div>
+
+        <div data-role="panel" id="panel-menu" data-display="overlay">
+            <ul data-role="listview">
+                <li data-icon="home"><a href="#home">Home</a></li>
+                <li data-icon="user"><a href="#profile">Profile</a></li>
+                <li data-icon="shop"><a href="#products">Products</a></li>
+                <li data-icon="mail"><a href="#contact">Contact</a></li>
+                <li data-icon="info"><a href="#about">About</a></li>
+            </ul>
+            <a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close</a>
+        </div>
+
+        <div role="main" class="ui-content">
+            <h2>Contact Us</h2>
+            <p>Fill out the form below to get in touch with us.</p>
+
+            <form>
+                <div class="ui-field-contain">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Your name">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Your email">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="subject">Subject:</label>
+                    <select name="subject" id="subject">
+                        <option value="">Select a subject...</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="sales">Sales Information</option>
+                    </select>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" placeholder="Your message"></textarea>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="subscribe">Subscribe to newsletter:</label>
+                    <select name="subscribe" id="subscribe" data-role="flipswitch">
+                        <option value="off">No</option>
+                        <option value="on">Yes</option>
+                    </select>
+                </div>
+                <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Send Message</button>
+            </form>
+
+            <div class="ui-grid-a" style="margin-top: 30px;">
+                <div class="ui-block-a">
+                    <div class="center-text">
+                        <div class="custom-icon">📞</div>
+                        <h3>Call Us</h3>
+                        <p>(555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="center-text">
+                        <div class="custom-icon">✉️</div>
+                        <h3>Email Us</h3>
+                        <p>info@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">Home</a></li>
+                    <li><a href="#profile" data-icon="user">Profile</a></li>
+                    <li><a href="#contact" data-icon="mail" class="ui-btn-active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div data-role="page" id="about">
+        <div data-role="header" data-position="fixed">
+            <a href="#home" data-icon="home" class="ui-btn-left">Home</a>
+            <h1>About</h1>
+            <a href="#panel-menu" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext">Menu</a>
+        </div>
+
+        <div data-role="panel" id="panel-menu" data-display="overlay">
+            <ul data-role="listview">
+                <li data-icon="home"><a href="#home">Home</a></li>
+                <li data-icon="user"><a href="#profile">Profile</a></li>
+                <li data-icon="shop"><a href="#products">Products</a></li>
+                <li data-icon="mail"><a href="#contact">Contact</a></li>
+                <li data-icon="info"><a href="#about">About</a></li>
+            </ul>
+            <a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close</a>
+        </div>
+
+        <div role="main" class="ui-content">
+            <h2>About Us</h2>
+            <p>We are a team of passionate developers dedicated to creating high-quality mobile and web applications.</p>
+
+            <div data-role="tabs" id="tabs">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#company" data-ajax="false" class="ui-btn-active">Company</a></li>
+                        <li><a href="#team" data-ajax="false">Team</a></li>
+                        <li><a href="#history" data-ajax="false">History</a></li>
+                    </ul>
+                </div>
+                <div id="company" class="ui-body-d ui-content">
+                    <h3>Our Company</h3>
+                    <p>Founded in 2020, our company specializes in building responsive mobile websites and applications using the latest technologies.</p>
+                    <p>We pride ourselves on creating user-friendly, accessible, and performant mobile experiences that work across all devices and platforms.</p>
+                </div>
+                <div id="team" class="ui-body-d ui-content">
+                    <h3>Our Team</h3>
+                    <ul data-role="listview" data-inset="true">
+                        <li>
+                            <h3>John Doe</h3>
+                            <p>Lead Developer</p>
+                        </li>
+                        <li>
+                            <h3>Jane Smith</h3>
+                            <p>UX Designer</p>
+                        </li>
+                        <li>
+                            <h3>Mike Johnson</h3>
+                            <p>Mobile Specialist</p>
+                        </li>
+                        <li>
+                            <h3>Sarah Williams</h3>
+                            <p>Project Manager</p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="history" class="ui-body-d ui-content">
+                    <h3>Our History</h3>
+                    <div data-role="collapsible-set">
+                        <div data-role="collapsible" data-collapsed="false">
+                            <h4>2025</h4>
+                            <p>Expanded our team to 20 members and opened a second office.</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h4>2023</h4>
+                            <p>Launched our first suite of mobile app templates and UI kits.</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h4>2020</h4>
+                            <p>Company founded by a small team of developers and designers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">Home</a></li>
+                    <li><a href="#profile" data-icon="user">Profile</a></li>
+                    <li><a href="#contact" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Page (Sample) -->
+    <div data-role="page" id="product-detail">
+        <div data-role="header" data-position="fixed">
+            <a href="#products" data-icon="back" class="ui-btn-left">Back</a>
+            <h1>Product Detail</h1>
+            <a href="#panel-menu" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext">Menu</a>
+        </div>
+
+        <div data-role="panel" id="panel-menu" data-display="overlay">
+            <ul data-role="listview">
+                <li data-icon="home"><a href="#home">Home</a></li>
+                <li data-icon="user"><a href="#profile">Profile</a></li>
+                <li data-icon="shop"><a href="#products">Products</a></li>
+                <li data-icon="mail"><a href="#contact">Contact</a></li>
+                <li data-icon="info"><a href="#about">About</a></li>
+            </ul>
+            <a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close</a>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div style="height: 200px; background-color: #eee; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                Product Image
+            </div>
+            
+            <h2>Mobile App Template</h2>
+            <h3 class="ui-bar ui-bar-a">$49.00</h3>
+            
+            <div data-role="tabs" id="product-tabs">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#description" data-ajax="false" class="ui-btn-active">Description</a></li>
+                        <li><a href="#features" data-ajax="false">Features</a></li>
+                        <li><a href="#reviews" data-ajax="false">Reviews</a></li>
+                    </ul>
+                </div>
+                <div id="description" class="ui-body-d ui-content">
+                    <p>A comprehensive mobile app template built with jQuery Mobile. Perfect for quick prototyping or as a foundation for your next mobile project.</p>
+                    <p>This template includes all the essential components and pages you need to get started, saving you hours of development time.</p>
+                </div>
+                <div id="features" class="ui-body-d ui-content">
+                    <ul data-role="listview">
+                        <li>Responsive Design</li>
+                        <li>Cross-Platform Compatibility</li>
+                        <li>20+ UI Components</li>
+                        <li>5 Pre-built Page Templates</li>
+                        <li>Easy Customization</li>
+                        <li>Documentation Included</li>
+                    </ul>
+                </div>
+                <div id="reviews" class="ui-body-d ui-content">
+                    <ul data-role="listview">
+                        <li>
+                            <h3>Great Template!</h3>
+                            <p>This template saved me so much time. Highly recommended.</p>
+                            <p class="ui-li-aside">★★★★★</p>
+                        </li>
+                        <li>
+                            <h3>Good Value</h3>
+                            <p>Very comprehensive and easy to customize.</p>
+                            <p class="ui-li-aside">★★★★☆</p>
+                        </li>
+                        <li>
+                            <h3>Excellent Support</h3>
+                            <p>The support team was very helpful when I had questions.</p>
+                            <p class="ui-li-aside">★★★★★</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-heart ui-btn-icon-left">Add to Wishlist</a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-shop ui-btn-icon-left">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">Home</a></li>
+                    <li><a href="#profile" data-icon="user">Profile</a></li>
+                    <li><a href="#contact" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Handle form submission
+            $("form").on("submit", function(e) {
+                e.preventDefault();
+                alert("Message sent! (This is a demo)");
+                $(this)[0].reset();
+            });
+            
+            // Simple page transition effect
+            $(document).on("pagecontainerbeforeshow", function() {
+                $.mobile.pageContainer.pagecontainer("getActivePage")
+                    .addClass("ui-page-active-animated");
+            });
+        });
+    </script>
+</body>
+</html>
